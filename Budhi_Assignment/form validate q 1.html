@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+
+ <title>Assignment</title>
+ 
+</head>
+ <body>
+
+  <form method="" onsubmit="return validate()" action="" name="my_form">
+  <table>
+         <tr>
+          <td>First Name</td>
+		  <td><input type="text" id="Fname" name="Fname" value=""></td>
+		 </tr>
+		  
+         <tr>
+          <td>Last Name</td> 
+		  <td><input type="text" id="Lname" name="Lname" value=""></td>
+		 </tr>
+		 
+         <tr>
+          <td align="right">Email</td>
+		  <td><input type="email" id="Email" name="Email" value=""></td>
+		 </tr>
+		  
+         <tr>
+          <td align="right">Phone</td>
+		  <td><input type="number" name="phone" id="phone"  value=""></td>
+		 </tr>
+		  
+		 <tr>
+		  <td align="right">Address</td>
+		  <td><textarea type="text" id="tarea" cols="16" rows="5">
+		  </textarea></td>
+		 </tr>
+		  
+		 <tr>
+		  <td align="right">Country</td>
+		      <td><select name="country">
+			     <option value="">[choose your contry]</option>
+				 <option value="btn">Bhutan</option>
+				 <option value="ind">India</option>
+				 <option value="jpn">Japan</option>
+				 <option value="chn">China</option>
+				 <option value="nep">Nepal</option>
+				 <option value="sng">Singapore</option>
+			  </select></td>
+			 </tr>
+			  
+			 <tr>
+			 <td></td> <td><input type="submit" value="submit"></td>
+			 </tr>
+			  
+			 </table>
+			</form>
+		  <script>  
+			 
+             function validate()
+                   {			 
+			         var fname = document.my_form.Fname.value;
+					 var lname = document.my_form.Lname.value;
+	                 //var letters = /^[a-zA-Z]*$/;
+	                 var email = document.my_form.Email;
+	                 var phone = document.my_form.phone;
+	                 var country = document.my_form.country.value;
+
+					 
+					 if(document.getElementById('Fname').value=="")
+					 {
+		               alert("First name is required");
+		               Fname.focus();
+		               return false;
+	                  }
+					  
+                     if(!isNaN(fname))
+					  {
+					     alert("fname cannot be number");
+						 Fname.focus();
+						 return false;
+					  }
+					    
+					  if(Lname.value.length <=0)
+					  {
+                         alert("Lname is required");
+						 Lname.focus();
+						 return false;
+					  }
+					    
+					 if(!isNaN(lname)){
+		                  alert("lname cannot be number");
+		                  Lname.focus();
+		                  return false;
+	                    }
+					  
+                      if(Email.value.length <=0)
+					   {
+		                alert("Email is required");
+		                Email.focus();
+		                return false;
+	                   }    
+					  
+					   if(phone.value.length <=0){
+		                alert("Phone is required");
+		                phone.focus();
+		                return false;
+	                   }
+					   
+	                   else if(phone.value.length <8)
+					   {
+		                alert("Phone number should be minium 8 digit");
+		                phone.focus();
+		                return false;
+						}
+						
+	                    if(Country=="")
+						{
+					    alert("Choose your country");
+						document.my_form.country.focus;
+						return false;
+                     }
+                    }
+          </script> 
+    
+  </body>
+</html>

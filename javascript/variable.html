@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	</head>
+	<body>
+	<p id="demo"></p>
+	<p id="day"></p>
+	<p id="month"></p>
+
+
+		<script type="text/javascript">
+
+			document.getElementById("demo").innerHTML=Boolean(10<9)
+
+			var num=10, nuM=20;
+			nuM=num++;
+			document.write("<br>"+num);
+			document.write("<br>"+nuM);
+
+			var num=10, nuM=20;
+			nuM=++num;
+			document.write("<br>"+nuM);
+			document.write("<br>"+num);
+
+			var num=10, nuM=20;
+			num=nuM++;
+			document.write("<br>"+nuM);
+			document.write("<br>"+num);
+
+			var num=10, nuM=20;
+			num=nuM++;
+			document.write("<br>sum of two number is: "+num);
+			document.write("<br>sum of two number is: "+nuM);
+
+			var num=10, nuM=20;
+			num=++nuM;
+			document.write("<br>sum of two number is: "+num);
+			document.write("<br>sum of two number is: "+nuM);
+
+
+			  //Using for loop to find the n factorial;
+			  
+
+			   var fac=1, i, n=4;
+
+					 for(i=1;i<=n;i++)
+					  {
+						 fac=fac*i;  
+					   }
+				
+					  document.write("<br>"+n+" factorial is "+fac);
+
+
+
+			   var a=20, b=30, sum=a+b, sub=b-a;
+			 
+				 if(sum!=sub && sum>sub) 
+					   {
+						 document.write("<br>sum is equal to sub: "+sum);
+					   } 
+			  
+				 else
+					   {
+						 document.write("<br>sum is not equal to sub: "+sum);
+					   }
+			  
+				 if(sum!=sub || sum>sub) 
+					   {
+						 document.write("<br>sum is equal to sub: "+sum);
+					   }  
+
+				 else
+					   {
+						 document.write("<br>sum is not equal to sub: "+sum);
+					   }
+			  
+			  
+			   // Using while loop;
+
+				var fac=1, i, m=5;
+
+				   while(m!=0)//(m>0)we can also-->,//(m)
+
+					   {
+						  fac=fac*m; 
+						  m--;	
+					   }
+				
+					   document.write("<br> factorial is: "+fac);
+			 
+			 
+			 
+			   //Using Switch to get the Day;
+			 
+				  var day;
+			 
+				   switch(new Date().getDay())
+					  {
+			 
+						 case 0:
+						 day="sunday";
+						 break;
+			 
+						 case 1:
+						 day="monday";
+						 break;
+			 
+						 case 2:
+						 day="tuesday";
+						 break;
+			 
+						 case 3:
+						 day="wednesday";
+						 break;
+			 
+						 case 4:
+						 day="thursday";
+						 break;
+			 
+						 case 5:
+						 day="friday";
+						 break;
+			 
+						 case 6:
+						 day="saturday";
+						 break;
+			 
+					  }
+					  document.getElementById("day").innerHTML="Today is "+day;
+			 
+			  
+			 /*var d=new Date();
+			 var month=new Array(12);
+			 
+			 month[0]="January";
+			 month[1]="February";
+			 month[2]="March";
+			 month[3]="April"; 
+			 month[4]="May";
+			 month[5]="June";
+			 month[6]="July";
+			 month[7]="August";
+			 month[8]="September";
+			 month[9]="October";
+			 month[10]="November";
+			 month[11]="December"; 
+			 }
+			 document.write("The month is " +month{d.getMonth()});
+			 
+			  */
+	</script>
+</body>
+</html>

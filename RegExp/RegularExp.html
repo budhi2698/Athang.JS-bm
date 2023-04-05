@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Regular Expresion</title>
+
+</head>
+<body>
+
+ <h2>6<sup>th</sup> of jan 2022 we have learned the Introduction of Regular Expression:</h2>
+
+<script>
+
+var string = "Pashi contract Number 1087645256. His age is 35";
+   string += "Sonam contract number 1087645256.\n His age is 25. apple <b>pineappple</b> RegExp pop philipines phphlipa. foo, bar, baz ";
+
+     //Using regExp constructor;
+	 
+    //var reg=new RegExp("\\D+","g"); //incorrect;
+	
+	var reg=new RegExp("\\d+","g");
+	
+	//var reg=new RegExp("[A-Za-z]","g");
+	
+	//var reg=new RegExp("[0-9]","g");
+	
+    //var reg=new RegExp("[^0-9]","g");
+	
+	//var reg=new RegExp("[a-z]","g");
+	
+	//var reg=new RegExp("[A-Z]","g");
+	
+	//var reg=new RegExp("[A-z]","g");
+	
+	//var reg=new RegExp("[a-Z]","g"); // incorrect;
+	
+	//var reg=new RegExp("\\p+","g");
+	
+	//var reg=new RegExp("\\p*","g");
+	
+	//var reg=new RegExp("\\p?","g");
+	
+	//var reg=new RegExp("\\p{3}","g");
+	
+	//var reg=new RegExp("\\p{2,3}","g");
+	
+	//var reg=new RegExp("\\p{2,}","g");
+	
+	//var reg=new RegExp("\\p$","g");
+	
+	//var reg=new RegExp("\^p","i");
+	
+	//var reg=new RegExp("[^a-zA-Z]","g"); 
+	
+	//var reg=new RegExp("\\p.p","g");
+	
+	//var reg=new RegExp("\\^.{2}$","g");   //incorrect
+	
+	//var reg=new RegExp("\\<b>(.*)</b>","g");
+	
+	//var reg=new RegExp("\\p(hp)","g");
+	
+	
+	// D capital will show the characters whereby d small letter shows the digits(number) and also uesd the diff pattern; 
+	
+	// 'g' stands for gobal search;
+	
+	// 'i' stand for ingnore;
+	
+	
+	document.write(string.search(reg));
+	
+    //document.write(string.replace(reg," Hello "));
+	
+	//Using regExliteral;
+	
+	//var regexliteral=/Sonam/g;
+
+	//var regexliteral=/p+/g;
+	
+	//var regexliteral=/^p/i;
+	
+	//var regexliteral=/[A-Z]/g;
+	
+	
+	//document.write(string.replace(regexliteral," Karma "));
+	
+	//document.write(string.match(regexliteral));
+	
+	
+	//10/01/22....!
+     
+     //Using Meta Character;
+	 
+	 //Using regExp constructor;
+	  
+	 //var reg=new RegExp("\.","g");
+	 
+	 //var reg=new RegExp("\\s","g");
+	 
+	 //var reg=new RegExp("\\S","g");
+	 
+	 //var reg=new RegExp("\\d","g");
+	 
+	 //var reg=new RegExp("\\D+","m"); 
+	 
+	 //var reg=new RegExp("\\w","g");
+	 
+	//var reg=new RegExp("\\W","g");
+	
+	//var reg=new RegExp("[aeiou]","g");
+	 
+	//var reg=new RegExp("[^aeiou]","g");
+	 
+	 //var reg=new RegExp("(foo|bar|baz)","g");
+	 
+	 
+	 //document.write(string.match(reg));
+	 
+	 //Using regExliteral;
+	 
+     //var regexliteral=/[\b]/g; // Search by Ma'am ?.
+	 
+	 //var regexliteral=/\0/g;        
+	 
+	// var regexliteral=/\t/g;   
+	
+	 //document.write(string.search(regexliteral));
+	 
+	 
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	 background-color: rgb(17, 16, 16);	
+}
+
+.container{
+	background-color:#8c9394;
+	width: 60%;
+	height: 100%;
+	margin-top: 20px;
+	padding: 10px;
+	text-align: left;
+}
+
+header{
+	border-bottom: #fff dashed 2px;
+	text-align: center;
+}
+
+input[type='submit']{
+	background-color:#FF6347;
+	border:0;
+	color:#fff;
+	padding:10px 15px;
+	cursor:pointer;
+}
+
+
+

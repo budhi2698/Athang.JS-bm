@@ -1,0 +1,53 @@
+<!DOCTYPE Html>
+<html>
+<head>
+
+
+</head>
+ <body>
+
+  <h2>5<sup>th</sup> of jan 2022 we have learned the (Add) and (Remove) of EventListener:</h2>
+
+
+ <input type="button"  id="btn" value="click me">
+ <input type="button" onclick="removeEvent()" value="remove event Listener">
+ <input type="button" onclick="addEvent()" value="add event Listener">
+ 
+      <script>
+
+             btn.addEventListener("mouseover", changeOnMouseOver);
+             btn.addEventListener("mouseout", changeOnMouseOut);
+			 
+			 function changeOnMouseOver()
+			     {
+			          this.style.background="red"; 
+	                  this.style.color="yellow";
+			     }
+
+             function changeOnMouseOut()
+			     {
+			          this.style.background="black"; 
+	                  this.style.color="green";
+			     }
+
+
+              function removeEvent()
+			       {
+			          btn.removeEventListener("mouseover",changeOnMouseOver);
+                      btn.removeEventListener("mouseout",changeOnMouseOut);
+			       }
+
+             function addEvent()
+			       {
+			          btn.addEventListener("mouseover",changeOnMouseOver);
+                      btn.addEventListener("mouseout",changeOnMouseOut);
+			       } 
+
+       </script>
+    </body>
+  </html>
+  
+  
+ 
+  
+  

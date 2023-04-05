@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+<p id="demo"></p>
+<button onclick="alertt()">alert</button>
+<button onclick="prom()">promt</button>
+<button onclick="confrm()">fonfirm</button>
+
+<script type="text/javascript">
+
+  document.write("hello world");
+  document.getElementById("demo").innerHTML="Happy world";
+  window.alert("Wellcome to my Stream");
+  console.log('Goodbye world');
+
+     function prom()
+         {
+             var tenure=prompt("please enter your tenure","15");
+             if(tenure !=null)
+    
+             alert("you have entered" +"tenure"+ "years");
+         }
+   
+     function confrm()
+         {
+	         confirm("are you sure! you want to confirm");
+         }
+  
+     function alertt()
+         {
+	         alert("Thank you darling");
+         }
+ 
+        document.getElementById("demo").innerHTML=Boolean(10<9)
+
+          var num=120;
+          var name="Budhi";
+           document.write("<br>"+num+name);
+
+
+var num=10, nuM=20;
+nuM=num++;
+document.write("<br>"+num);
+document.write("<br>"+nuM);
+
+var num=10, nuM=20;
+nuM=++num;
+document.write("<br>"+nuM);
+document.write("<br>"+num);
+
+var num=10, nuM=20;
+num=nuM++;
+document.write("<br>"+nuM);
+document.write("<br>"+num);
+
+var num=10, nuM=20;
+num=nuM++;
+document.write("<br>sum of two number is: "+num);
+document.write("<br>sum of two number is: "+nuM);
+
+var num=10, nuM=20;
+num=++nuM;
+document.write("<br>sum of two number is: "+num);
+document.write("<br>sum of two number is: "+nuM);
+
+
+
+
+var a=20, b=30, sum=a+b, sub=b-a;
+
+var fac=1, i, n=4;
+
+for(i=1;i<=n;i++)
+  {
+    fac=fac*i;  
+  }
+  
+document.write("<br>"+n+" factorial is "+fac);
+ 
+if(sum!=sub && sum>sub) 
+  {
+    document.write("<br>sum is equal to sub: "+sum);
+  }
+  
+else
+  {
+    document.write("<br>sum is not equal to sub: "+sum);
+  }
+  
+ if(sum!=sub || sum>sub) 
+  {
+    document.write("<br>sum is equal to sub: "+sum);
+  }
+
+else
+  {
+     document.write("<br>sum is not equal to sub: "+sum);
+  }
+ 
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+  <!DOCTTYPE html>
+<html>
+   <head>
+        <title>Array</title>
+   </head>
+   <body>
+     <h2>JavaScript Arrays</h2>
+	 <p>The best way to loop through an array is using a standard</p>
+	 
+	  <p id="demo"></p>
+	  <p id="join"></p>
+      <p id="sort"></p> 
+      <p id="rev"></p>
+	  
+	 <script>
+       const fruits =["Banana","Orange","Apple","Mango"];
+	   
+       // Note (1): pop() method remove the last element from an array.
+	   
+	   //fruits.pop(); 
+	   
+	   // Note (2): push() method adds an element to the array(at the end)
+	   
+       //fruits.push("kiwi");
+	   
+	   // Note (3): shift() method remove the first element from array.
+	   
+      // fruits.shift(); 
+    
+      document.write(fruits+"<br><br>");
+      
+	  //(using length of an array)
+	  
+     let flen=fruits.length;
+	 for (let i=0; i< flen; i++)
+      {
+	       document.write(fruits[i]+"<br>");
+      }
+ 
+ 
+ 
+    /* Note (4): The JavaScript method tostring() converts an array to a string of(comma seperated) array values.
+	    
+		
+    // document.getElementById("demo").innerHTML=fruits.toString();
+	 
+	 
+	 /* Note (5): The join() method behaves just like toString(), but in addition you can specify the seperator.*/
+	 
+    document.getElementById("join").innerHTML=fruits.join("*"+"<br>");
+	
+	
+	/* Note (6): The concat() method creates a new array by merging existing array to the concat() method does not change the existing arrays. It always returns a new array. */
+	
+	const arr1=["Hello","Hi"];
+	const arr2=[1,2,4];
+	const arr3=arr1.concat(arr2);
+	document.write("<br><br>"+arr3);
+	
+	// Note (7): Slice() method slice or devide an array into new array.
+	
+	const sli=fruits.slice(1,3);
+	document.write("<br><br>"+sli);
+	
+	       
+	// Note (8): Sort() method it will display the element in assending order(Eg A-Z) / whereas Reverse() method will be display in decending order(Eg Z-A) 
+	
+	document.getElementById("sort").innerHTML=fruits.sort();
+	
+	document.getElementById("rev").innerHTML=fruits.reverse();
+	document.write("<br>")+fruits.reverse();
+	
+     </script>
+   </body>
+</html>

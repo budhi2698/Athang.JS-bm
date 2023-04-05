@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	  
+	  <title>js</title> 
+	</head>
+
+<body>
+
+		<h2>My Frist Web Page</h2>
+		<p>My Frist Web Page</p>
+
+		<p id="demo"></p>
+		<p id="name"></p>
+
+
+		<button onclick="alertt()">alert</button>
+		<button onclick="prom()">promt</button>
+		<button onclick="confrm()">confirm</button>
+
+		<script type="text/javascript">
+		document.write("hello world");
+		document.getElementById("demo").innerHTML="hello world!";
+		window.alert("My page");
+		console.log('hello world');
+
+		 function prom()
+		 {
+		 var tenure=prompt("please enter your tenure","15");
+		  if(tenure !=null)
+			
+			alert("you have entered" +"tenure"+ "years");
+		 }
+		   
+		 function confrm()
+		 {
+			confirm("Do you want to confirm");
+		 }
+		  
+		function alertt()
+		 {
+			alert("Thank you dear");
+		 }
+		 
+		 //date 13/12/21 topic object and scope
+		 
+		 var person={firstname:"Budhi", lastname:"Man", age:23};
+		 //var person="Budhi";
+		 document.write("<br>"+person.lastname);
+		 document.getElementById("name").innerHTML=person.age;
+		 
+		</script>
+</body>
+</html>

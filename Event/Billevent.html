@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+  <body>
+
+     <h2>5<sup>th</sup> of jan 2022 we have learned the application of Event:</h2>
+
+
+
+      <table>
+           <tr>
+	            <th>Items</th>
+	            <th>Price</th>
+	            <th>Quantity</th>
+	       </tr>
+      
+	       <tr>
+                <td>Potatoes</td>
+	            <td>100</td>
+	            <td><input type="number" id="potatoes"></td>
+	       </tr>
+	
+	       <tr>
+               <td>Chicken</td>
+	           <td>200</td>
+               <td><input type="number" id="chic"></td>
+	       </tr>
+	
+	       <tr>
+               <td>Mushroom</td>
+	           <td>190</td>
+	           <td><input type="number" id="mush"></td>
+           </tr>	  	 
+      </table>
+   
+	      <input type="button" value="Total cost" onclick="totalCost()">
+	      <input type="text" id="cost" onfocus="this.blur()">
+	  
+	 
+	  <script>
+	 
+	 // first stored the value and then procceed;
+	 
+	       function totalCost()
+		          { 
+		             var pot=document.getElementById("potatoes").value;
+					 var chi=document.getElementById("chic").value;
+					 var mus=document.getElementById("mush").value;
+					 
+					 document.getElementById("cost").value=pot*100+chi*200+mus*190;
+		          }
+	 
+	  </script>
+	  
+	  
+   </body>
+</html>

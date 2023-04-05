@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<button onclick="cal()">calculator</button>
+
+<script>
+
+ //Making Calculater using javascript in (if)..  .(else if) statement in prompt;
+
+function cal()
+ {
+	 var choice=prompt("1.add\n"+"2.substract\n"+"3.multiple\n"+"4.divide\n"+"Enter your choice: ");
+	 if(choice==1)
+	 {
+		var a=parseInt(prompt("enter a: "));
+		var b=parseInt(prompt("enter b: "));
+		var sum=a+b;
+		alert("sum  is: "+sum);
+	}
+		 
+	else if(choicce==2)
+	{
+		var a=parseInt(prompt("enter a: "));
+		var b=parseInt(prompt("enter b: "));
+		var sub=a-b;
+		alert("sub is: "+sub);
+	}
+		
+	else if(choicce==3)
+	{
+		var a=parseInt(prompt("enter a: "));
+		var b=parseInt(prompt("enter b: "));
+		var mul=a*b;
+		alert("mul is: "+mul);
+	}	
+		
+	else if(choicce==4)
+	{
+		var a=parseInt(prompt("enter a: "));
+		var b=parseInt(prompt("enter b: "));
+		var div=a-b;
+		alert("div is: "+div);
+	 }
+    
+ }
+
+
+</script>
+</body>
+</html>

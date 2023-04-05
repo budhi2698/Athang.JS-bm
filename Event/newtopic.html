@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assigning Event Handlers</title>
+</head>
+<body>
+
+<h1><u>30<sup>th</sup> Dec We have learned theAssigning Event Handlers</u></h1>
+
+<h3 style="color:tomato">Javascript can be used to access and modify these DOM object and their properties. For examples, you can add , modify and remove HTML elements and their attributes. Along the same lines, you can use DOM object properties to assign event handlers to events.</h3>
+
+
+<input type="button" value="click me" id="btn">
+<input type="button" value="click me" onmouseover="change">
+
+ <script>
+   document.getElementById("btn").onmouseover = changeColorOnMouseOver;
+   document.getElementById("btn").onmouseout = changeColorOnMouseOut;
+
+      function changeColorOnMouseOver()
+       {
+	      this.style.background = 'red'; 
+	      this.style.color = 'yellow';
+	   }
+
+      function changeColorOnMouseOut()
+       {
+	      this.style.background = 'black'; 
+	      this.style.color = 'white';
+	   }
+
+
+     //Using the function directly;
+
+   document.getElementById("btn").onmouseover = function ()
+	   {
+	      this.style.background = 'tomato'; 
+	      this.style.color = 'blue';
+	   }
+
+   document.getElementById("btn").onmouseout = function ()
+
+       {
+	      this.style.background = 'pink'; 
+	      this.style.color = 'white';
+	   }
+
+ 
+
+  </script>
+ </body>
+</html>

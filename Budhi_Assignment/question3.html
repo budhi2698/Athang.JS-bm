@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+<head>
+<title>calculation</title>
+</head>
+
+<body>
+
+<td>1st number</td><input type="number" id="firstnumber"><br><br>
+
+<td>2st number</td><input type="number" id="secondnumber"><br><br>
+
+<input type="button" onClick="multiplyBy()" value="multiply"><br><br>
+
+<input type="button" onClick="divideBy()" value="divide"><br><br>
+
+<p>The result is:<br>
+
+<span id="result"></span></p>
+
+
+<script>
+function multiplyBy()
+{
+   num1=document.getElementById("firstnumber").value;
+   num2=document.getElementById("secondnumber").value;
+   document.getElementById("result").innerHTML= num1*num2;
+   }
+   function divideBy()
+{
+   num1=document.getElementById("firstnumber").value;
+   num2=document.getElementById("secondnumber").value;
+   document.getElementById("result").innerHTML= num1/num2;
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form Validation</title>	
+</head>
+
+<body>
+ <h2>11<sup>th</sup> Jan 2022 we have learned the Introduction of form validations</h2>
+ 
+<h2><u>Short Notes:</u></h2>
+
+<p> Form Validation is to check whether the required task is true or false.<br><br>
+ 
+ Two ways of or use of form validations are:<br><br>
+
+ 1)security mesurament<br>
+ 2)and Data integrity<br><br>
+ 
+ Two types of Form Validation :<br><br>
+ 
+ 1) Basic Validation <br>
+  
+ 2) Data format<br>
+ 
+ </p>
+ 
+ <FORM NAME="myForm" onsubmit="formvalidat()">
+      <label>Name</label><br>
+	  <input type="text" id="name"><br><br>
+	  
+	  <label>Contract Number</label><br>
+	  <input type="number" id="cont"><br><br>
+	  
+	  <label>Password</label><br>
+	  <input type="password" id="pass"><br><br>
+	  
+	  <label>Confirm password</label><br>
+	  <input type="Confirm Password" id="confpw"><br><br>
+	  
+      <input type="submit" value="submit form"><br><br>
+  </FORM>
+ 
+ 
+ <script>
+	function formvalidat()
+	{
+	 if(document.getElementById('name').value=="")
+      {
+	      alert("Enter your name");
+	  }
+	
+	 if(document.getElementById('name').value!="\D+")
+      {
+	      alert("your name cannot be number");
+	  }
+	
+	  
+	 if(document.myform.name.value==""||
+	  document.myForm.cont.value.length!=8)
+      {
+	      alert("Enter your contract number and it's length should be 8");  
+	  }
+ }		
+		 
+	// if(document.myform.name.value==""||
+	 // document.myForm.cont.value.required)
+     // {
+	   //   alert("Your password should not be empty and it's should be same password");
+		    
+		  
+	 // } 
+	 //}
+	 
+	 
+/*
+ if(document.myform.name.value!="\D+");
+      {
+	      alert("Name cannot be number");
+	  }
+	 */
+ </script>
+</body>
+</html>
+	

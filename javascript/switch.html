@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Switch</title>
+</head>
+<body>
+<p id="day"></p>
+<p id="demo"></p>
+<button onclick="alertt()">alert</button>
+<button onclick="fact()">factorial</button>
+<button onclick="cal()">calculator</button>
+
+	<script>
+
+	var day;
+	 
+	 switch(new Date().getDay()){
+	 
+	 case 0:
+	 day="sunday";
+	 break;
+	 
+	 case 1:
+	 day="monday";
+	 break;
+	 
+	 case 2:
+	 day="tuesday";
+	 break;
+	 
+	 case 3:
+	 day="wednesday";
+	 break;
+	 
+	 case 4:
+	 day="thursday";
+	 break;
+	 
+	 case 5:
+	 day="friday";
+	 break;
+	 
+	 case 6:
+	 day="saturday";
+	 break;
+	 
+	 }
+	 document.getElementById("day").innerHTML="Today is "+day;
+	 
+	//using fact in promt
+
+	function fact()
+	 {
+		var n=prompt("please enter your number","4");
+		var fact=1;
+
+	  for(let i=1;i<=n;i++)
+	  {
+		fact=fact*i;  
+	  }
+		alert(n+" factorial is : "+fact);
+	  }
+
+	function cal()
+	 {
+		 var choice=prompt("1.add\n"+"2.substract\n"+"3.multiple\n"+"4.divide\n"+"Enter your choice: ");
+		 switch(choice){
+			case "1":
+			var a=parseInt(prompt("enter a: "));
+			var b=parseInt(prompt("enter b: "));
+			var sum=a+b;
+			alert("sum is: "+sum);
+			break;
+			 
+			case "2":
+			var a=parseInt(prompt("enter a: "));
+			var b=parseInt(prompt("enter b: "));
+			var sub=a-b;
+			alert("sub is: "+sub);
+			break;
+			
+			case "3":
+			var a=parseInt(prompt("enter a: "));
+			var b=parseInt(prompt("enter b: "));
+			var mul=a*b;
+			alert("mul is: "+mul);
+			break;
+			
+			case "4":
+			var a=parseInt(prompt("enter a: "));
+			var b=parseInt(prompt("enter b: "));
+			var div=a-b;
+			alert("div is: "+div);
+			break;
+		 }
+		
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prime Number</title>
+</head>
+
+<body>
+
+<button onclick="prim()">Prime Number</button>
+
+<Script>
+//Today's Topic:
+//24/12/2021 learnd if..else statement 
+//(find wether the given number is prime number or not)
+
+	function prim()
+	{
+	  var n=prompt("is a prime number"),f=0;
+	  
+	  for(let i=1; i<=n; i++) 
+	  {
+		 if(n%i==0)
+		  {
+			 f++;
+		  }
+	  }
+	   if(f==2)
+	  {                                                                        
+		 document.write(n+" is a prime number");
+	  
+	  }
+	  else
+	  {
+		 document.write(n+" is not a prime number");
+	  
+	  }
+	}
+</script>
+</body>
+</html>

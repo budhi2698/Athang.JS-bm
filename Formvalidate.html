@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validate</title>
+<link rel="stylesheet" href="formV.css" type="text/css">
+</head>
+<body>
+    <center>
+		<div class="container">
+			<header>
+			<h3>Wellcome To The Simple Quize</h3>
+			<p>Test your Knowladge</p><br>
+			</header>
+			<FORM NAME="myForm" id="myForm" onsubmit="return submitAnswer()">
+				<table>
+					<tr>
+					   <td>Name</td>
+					   <td><input type="text" id="name" placeholder="enter your name"></td>
+					</tr>
+					<tr>
+					   <td>Student no</td><br>
+					   <td><input type="text" id="student"><td>
+					</tr>
+				    <tr>
+					   <td>Email</td><br>
+					   <td><input type="email" id="email"></td><br><br>
+					</tr>
+			        <tr>
+						<td align="right">Semester:</td>
+						<td border="1px">
+							<select name="semster" id="semster">
+							<option value="-1">Choose your semester</option>
+							<option value="0">Year I, Semester I</option>
+							<option value="1">Year I, Semester II</option>
+							<option value="2">Year II, Semester I</option>
+							<option value="3">Year II, Semester II</option>
+							<option value="4">Year III, Semester I</option>
+							<option value="5">Year III, Semester II</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<b><h2>True or False</h2></br>
+				  
+				<h3>Tick the checkbox if the answer is true and of it is false the you don't need to tick </h3><br>
+				  
+				<p>1. JavaScript is used to read an Html page and render it
+					<label><input type="checkbox" name="q1" id="q1" value="true" /></label></p>
+					<p>2.CSS stands for cascading stylesheet.
+					  
+					<label><input type="checkbox" name="q2" id="q2" value="true" /></label></p>
+					
+					<p>3.JavaScript is an scripting language.
+					  
+					<label><input type="checkbox" name="q3" id="q3" value="true" /></label></p><br><br>
+				   
+			    <b><h2>Multiple chioce question</h2></b><br>
+			    <h3>4. Href</h3>
+			    <br>
+			    <input type="radio" name="q4" id="q4" value="a"> <label>a.Is a tag of a tag</label><br>
+			    <input type="radio" name="q4" id="q4" value="b"> <label>b.Is a Value of a tag</label><br>
+			    <input type="radio" name="q4" id="q4" value="c"> <label>c.Is an Attribute of a tag</label><br>
+			    <input type="radio" name="q4" id="q4" value="d"> <label>d.Stands for Hyperlink Repeat Electronic Filing</label><br><br>
+				
+			    <b><h3>In which loop condition comes after the body of the loop</h3></b><br>
+			    <input type="radio" name="q5" id="q5" value="a"> <label>a.While loop</label><br>
+			    <input type="radio" name="q5" id="q5" value="b"> <label>b.For loop</label><br>
+			    <input type="radio" name="q5" id="q5" value="c"> <label>c.Do-while loop</label><br>
+			    <input type="radio" name="q5" id="q5" value="d"> <label>d.Nested loop</label><br>
+				   
+			   <br>
+			   <h2>Fill in the blank</h2><br>
+			   <p>6. 
+					<label><input type="text" name="q6" id="q6" /></label> is used to read an Html page and render it</p>
+
+					<p>7.Inline CSS applies a unique style over 
+
+					<label><input type="text" name="q7" id="q7" /></label></p>
+
+					<p>8. JavaScript is a 
+
+					<label><input type="text" name="q8" id="q8" /></label> language</p><br>
+
+			   
+			   <input type="submit" value="sending for grading"><br><br><br>
+
+			   <textarea name="textarea" cols="82" rows="5" id="result" width="10%"></textarea>
+		    </form>
+	    </div>
+    </center>
+	
+        <script>
+		   function submitAnswer()
+		   {
+			var score=0;
+			var total=8;
+			var name=document.forms["myForm"]["name"].value;
+			var fullname=name.split(' ');
+			var fname=fullname[0];
+			var student=document.forms["myForm"]["student"].value;
+			var email=document.forms["myForm"]["email"].value;
+			var sem=document.forms["myForm"]["semster"].value;
+			var q4=document.forms["myForm"]["q4"].value;
+			var q5=document.forms["myForm"]["q5"].value;
+			var q6=document.forms["myForm"]["q6"].value;
+			var q7=document.forms["myForm"]["q7"].value;
+			var q8=document.forms["myForm"]["q8"].value;
+			 if(name=="" ||!isNaN(name))
+			 { 
+				 alert("please enter your name and name cannot be 
+				 numbers");
+				 return false;
+			 }
+			 else if(student=="")
+			 {
+				alert("enter student number ");
+				return false;
+			 }
+			 else if(email=="")
+			 {
+				alert("Enter your email");
+				return false;
+			 }
+			else if(sem=="-1")
+			{
+				alert("choose your semester");
+				return false;
+			}
+			 var q1;
+			if(document.forms["myForm"]["q1"].checked)
+		   {
+			  q1=document.forms["myForm"]["q1"].value;
+		   }
+			else
+			   {
+				 q1="false";
+				 alert("You didn't checked the checkbox for 
+				 question 1.So, answer will be set false by Default");
+			   }
+		   var q2;
+			if(document.forms["myForm"]["q2"].checked)
+		   {
+			  q2=document.forms["myForm"]["q2"].value;
+		   }
+		  else
+		  {
+			 q2="false";
+			 alert("You didn't checked the checkbox for question 2. 
+			 So, answer will be set false by Default");
+		  }
+		  
+		   var q3;
+			if(document.forms["myForm"]["q3"].checked)
+		   {
+			  q3=document.forms["myForm"]["q3"].value;
+		   }
+		  else
+		  {
+			 q3="false";
+			 alert("You didn't checked the checkbox for question 3.
+			 So, answer will be set false by Default");
+		  }
+		   if(q4=='')
+		  {
+			  alert("You missed Question 4");
+			  return false;
+		  }
+		  else if(q5=='')
+		  {
+			  alert("You missed Question 5");
+			  return false;
+		  }
+		  else if(q6=="")
+		  {
+			  alert("You missed Question 6");
+			  return false;
+		  }
+		  else if(q7=='')
+		  {
+			  alert("You missed Question 7");
+			  return false;
+		  }
+		  else if(q8=='')
+		  {
+			  alert("You missed Question 8");
+			  return false;
+		  }
+		   var answer=["false","true","true","c","c","Browser",
+		   "elements","scripting"];
+			if(q1==answer[0])
+		  {
+			  score++;
+		  }
+			if(q2==answer[1])
+		  {
+			  score++;
+		  }
+			if(q3==answer[2])
+		  {
+			  score++;
+		  }
+		  if(q4==answer[3])
+		  {
+			  score++;
+		  }
+		  if(q5==answer[4])
+		  {
+			  score++;
+		  }
+		  if(q6.toLowerCase()==answer[5].toLowerCase())
+		  {
+			  score++;
+		  }
+		   if(q7.toLowerCase()==answer[6].toLowerCase())
+		  {
+			  score++;
+		  }
+		   if(q8.toLowerCase()==answer[7].toLowerCase())
+		  {
+			  score++;
+		  }
+			var results=document.getElementById('result');
+			if( score>=6) 
+			{
+				results.innerHTML= 'Well done '+fname+'. You got 
+				'+score+' out of '+total+'correct';
+			}
+			else if( score>=3)
+			{
+				results.innerHTML= "Keep trying "+fname+". You answered 
+				"+score+" out of "+total+" correctly";
+			}
+			else if( score>=0)
+			{
+				results.innerHTML= "Do not give up. You can do it, 
+				"+fname+". You got "+score+" out of "+total+" okay.";
+			}
+			 return false;
+		   }
+		</script>
+</body>
+</html>

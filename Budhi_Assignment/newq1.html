@@ -1,0 +1,99 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Assignment</title>
+		
+		
+	</head>
+	<body>
+	 <form method="" onsubmit="return validate()" action="" name="my_form" >
+	
+			 <dt>First Name</dt>
+		
+			 <dt><input type="text" name="Fname" value="" id="Fname"></dt><br>	
+	
+			 <dt>Last Name</td>
+					
+			 <dt><input type="text" name="Lname" id="Lname"  value=""></dt><br>
+
+			 <dt>Email</dt>
+					
+		     <dt><input type="email" name="Email" id="Email"  value=""></dt><br>
+					
+	         <dt>Phone</dt>
+					
+			 <dt><input type="number" name="phone" id="phone"  value=""></dt><br>
+					
+		     <dt>Address</dt>
+					
+			 <dt><textarea type="text" name="address" id="address" style="height:80px;"></textarea></dt><br>
+					
+			 <dt>Country</dt>
+			   <dt><select name="country">
+				     <option value=" ">[choose yours]</option>
+					 <option value="bht">Bhutan</option>
+					 <option value="ind">India</option>
+					 <option value="nep">Nepal</option>
+					 <option value="chi">China</option>
+					 <option value="pak">Pakistan</option>
+				     <option value="jap">Japan</option>		
+				 </select>
+			</dt><br><br>
+					
+			 <dt><input type="submit"><dt><br>
+	 </form>
+	 
+<script>
+  function validate(){
+	var fname = document.my_form.Fname;
+	var Lname = document.my_form.Lname;
+	var letters = /^[a-zA-Z]*$/;
+	var email = document.my_form.Email;
+	var phone = document.my_form.phone;
+	var country = document.my_form.country.value;
+
+	if(Fname.value.length <=0){
+		alert("First Name is required");
+		Fname.focus();
+		return false;
+	}
+	else if(!Fname.value.match(letters)){
+		alert("name cannot be number");
+		Fname.focus();
+		return false;
+	}
+	if(Lname.value.length <=0){
+		alert("Last Name is required");
+		Lname.focus();
+		return false;
+	}
+	else if(!Lname.value.match(letters)){
+		alert("name cannot be number");
+		Lname.focus();
+		return false;
+	}
+	if(Email.value.length <=0){
+		alert("Email is required");
+		Email.focus();
+		return false;
+	}
+	if(phone.value.length <=0){
+		alert("Phone is required");
+		phone.focus();
+		return false;
+	}
+	else if(phone.value.length <8){
+		alert("Phone number should be minium 8 digit");
+		phone.focus();
+		return false;
+	}
+	
+	if(country==""){
+		alert("Choose your country");
+		document.my_form.country.focus();
+		return false;
+	}
+}
+</script>
+</body>
+</html>

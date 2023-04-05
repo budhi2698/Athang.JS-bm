@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Making Bill</title>
+</head>
+<body>
+
+<form>
+  <table>
+	  
+	       <tr>
+		       <th>Fruits Name</th>
+		       <th>Price</th>
+		       <th>Quantity</th>
+		   </tr>
+	  
+	      <tr>
+		     <td>Apple</td>
+			 <td>600</td>
+			 <td><input type="number" id="App"></td>
+		  
+		  </tr>
+	  
+	      <tr>
+		     <td>Orange</td>
+			 <td>400</td>
+			 <td><input type="number" id="orang"></td>
+		  </tr>
+	  
+	  
+	      <tr>
+		     <td>Banana</td>
+			 <td>250</td>
+			 <td><input type="number" id="bana"></td>
+		  </tr>  
+	   </table>
+	     
+		  <input type="button" value="Total cost" onclick="totalCost()">
+		  
+	      <input type="text" id="cost" onfocus="this.blur()"><br>
+		  
+		  <br><input type="submit" value="submit"><br><br>
+		  
+		 <script>
+		 
+		     function totalCost()
+			      {
+				     var ap=document.getElementById("App").value;
+				     var oran=document.getElementById("orang").value;
+					 var ban=document.getElementById("bana").value;
+					 
+					 
+					 document.getElementById("cost").value=ap*600+oran*400+ban*250;
+				  }
+		 
+          
+		 </script> 
+		 </form>
+   </body>
+</html>

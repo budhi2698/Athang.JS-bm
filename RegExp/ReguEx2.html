@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+<body>
+
+ <h2>11<sup>th</sup> of jan 2022 we have learned the string method whereby uing (replace) (match) (split) (search) in Regular Expression:</h2>
+
+
+ <script>
+      var string = "Tashi contract Number 1087645256. His age is 35";
+          string += "Sonam contract number 1087645256.\n His age is 25.";
+
+           // Using match...;
+		   
+             //document.write(string.match(/\d+/g));
+
+
+           // Using replace: xxxx;
+		     
+             //document.write(string.replace(/\d+/g, "xxxx"));
+
+             //Using split....;
+
+
+             //document.write(string.split(/\D+/g));
+			 
+			 
+           // Using search.....;
+
+             //document.write(string.search(/\d+/g));
+			 
+			 
+		   // Commonly used RegExp object properties....; 
+			 
+			 //var reg=new RegExp("\\d+","gi");
+			 
+			 //document.write("g="+reg.global+"<br/>");
+			 
+			 //document.write("i="+reg.ignoreCase+"<br/>");
+			 
+			 //document.write("m="+reg.multiline+"<br/>");
+			 
+			 
+			 //document.write("source="+reg.source+"<br/>");
+			 
+			 
+		   // Here is the list of the Methods associatedwith RegExp and it's Examples...; 
+		   
+		   
+		   // Using exce()...;
+		   
+		    //var reg=new RegExp("\\d+");
+		   
+		     //document.write(reg.exec(string));
+			 
+		   
+		 /* var reg=new RegExp("\\d+","g");
+		    var result;
+			
+			     while((result=reg.exec(string))!=null) 
+                       {
+					     document.write(result[0]+ "<br/>"); 
+					   }
+         */
+           	
+			
+            // Using exce()...;
+
+		    //var reg=/\d+/g;  
+             
+			     //document.write("String contain numbers-"+reg.test(string))
+		
+	        var reg=new RegExp("\\d+","g");  
+	
+	              document.write("String contain numbers-" + reg.test(string));
+	
+	
+	
+	
+</script>
+</body>
+</html> 

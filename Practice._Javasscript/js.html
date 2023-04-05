@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic JS</title>
+</head>
+<body>
+
+<h2>30<sup>th</sup> Dec I am going to Practice the Basic of JavaScript and it's function</h2>
+
+
+<h4>My Web Pages</h4>
+
+<p id="demo"></p>
+<p id="bolan"></p>
+<p id="name"></p>
+
+
+
+<button onclick="alertt()">alert</button>
+<button onclick="promt()">promt</button>
+<button onclick="confrm()">confirm</button>
+
+  <script>
+      document.write('Hello World');
+      document.getElementById("demo").innerHTML="Bye World";
+      window.alert('Thank You World');
+      console.log('Good Bye World');
+	  
+	  document.getElementById("bolan").innerHTML=Boolean(10>5);
+      
+         function alertt()
+                  { 
+	                 alert("Well Come To My Fantestic World");
+	              }
+
+         function promt()
+              {
+		        var tenure=prompt("You have enter the tenure of 15, years");
+			    if (tenure !=null);
+		           {
+                     alert("You have enter" +"tenure"+ "years");
+			       }
+              }
+
+         function confrm()
+		           {
+				     alert('Are You Sure You Want To Confrim ?');
+				   }
+
+
+          //04/01/2022: Declear variables:
+
+         var person={firstname:"Budhi", lastname:"Man", age:23};
+         document.write("<br>"+person.lastname);
+         document.getElementById("name").innerHTML=person.age;		 
+        
+         var name="Budhi";
+		 var num=120;
+		 
+		 document.write("<br>"+name+num);
+		 
+		 
+		 var num=10, nuM=20;
+		 //sum of two number;
+		 /*
+		 num=num+nuM;
+		 
+		 document.write("<br> sum of two number is :"+num);
+		 document.write("<br> sum of two number is :"+nuM);
+		 
+		 
+		 nuM=nuM+num;
+		 
+		 document.write("<br> sum of two number is :"+nuM);
+		 document.write("<br> sum of two number is :"+num);
+		 
+		 
+		 // After increment;
+		 
+		 num=nuM++;
+		 
+		 document.write("<br> sum of two number is :"+num);
+		 document.write("<br> sum of two number is :"+nuM);
+		 */
+		 
+		 // Before increment;
+		 
+		 nuM=++num;
+		 
+		 document.write("<br> sum of two number is :"+num);
+		 document.write("<br> sum of two number is :"+nuM);
+		 
+		 
+		 
+		 //05/01/2022;
+		 
+		 //Using for loop to find the n factrioal;
+		 
+		 var fac=1, i, n=4;
+		 
+		 
+		       for(i=1; i<=n; i++)
+			      {
+				      fac=fac*i;  
+				  }
+		 
+		         document.write("<br>"+n+" factorial is "+fac);
+		        
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+
+  </script>
+ </body>
+</html>

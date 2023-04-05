@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eventparat</title>
+  
+ <style> 
+    .styleClass
+	{
+        display:table-cell;
+        border:1px solid black;
+        padding:20px;
+        text-align:center;		
+	
+	}
+  
+ </style>
+</head>
+
+<body onload="Myfunction()">
+
+<h2>5<sup>th</sup> of jan 2022 we have learned the  Event:</h2>
+
+     <div class="styleClass" id="divE">Div Element
+   
+           <span class="styleClass">Span Element
+                 <input type="button" id="btn1" value="Click me">
+           <span>
+		
+    </div>
+  
+     <br>
+          <label>Frist Name: </label><br><br>
+	      <input type="text" id="fname" onkeyup="validatef('fname')" onblur="validatef('fname')"><br><br>
+	
+          <label>Last Name: </label><br><br>
+          <input type="text" id="lname" onchange="upperCase()" value="dema"><br><br>
+	
+          <input type="button" value="click me" id="btn" mouseover="changeColormouseOver()" mouseout="changeColormouseOut()" ondblclick="changedb()"><br><br>
+	
+	      <input type="submit" value="submit" id="sub" onclick="return subfun()"><br>
+
+
+         <script>
+             document.getElementById('btn1').addEventListener("click",function(){alert("hello");},false);
+		     document.getElementById('divE').addEventListener("click",function(){alert("div element");},false);
+          
+		   
+		   function Myfunction()
+		          {
+		             alert("Well Come to my Website");
+		          }
+
+	       function changeColoronmouseOver()
+			  {
+				var control=document.getElementById("btn");
+				control.style.background='red';
+				control.style.color='yellow';
+			  }
+			function changeColoronmouseOut()
+			  {
+				var control=document.getElementById("btn");
+				control.style.background='black';
+				control.style.color='white';
+			  }
+
+           function changedb()
+			 {
+				var control=document.getElementById("btn");
+				control.style.background='blue';
+				control.style.color='white';
+			 }
+			 
+			function subfun()
+			 {
+				if(confirm("are you sure you want to submit"))
+				{
+					alert("select ok");
+					return true;
+				}
+				else{
+					alert("select cancel");
+					return false;
+				}
+			 }
+			
+			function validatef(controlId)
+			 {
+				var control=document.getElementById(controlId);
+				control.style.color='white';
+				if(control.value=="")
+				{
+					control.style.background='red';
+				}
+				else{
+					control.style.background='green';
+				}
+			 }
+			 
+			function upperCase()
+			  {
+				const x=document.getElementById('lname');
+				x.value=x.value.toUpperCase();
+			  }
+
+
+
+/*
+           function changeColoronmouseOver()
+			      {
+				     var control=document.getElementById("btn");
+				     control.style.background='red';
+				     control.style.color='yellow';
+		          }
+				 
+		   function changeColoronmouseOut()
+			       {
+			 	     var control=document.getElementById("btn");
+				     control.style.background='black';
+				     control.style.color='white';
+			       }
+
+*/
+
+         </script> 
+</body>
+</html>
